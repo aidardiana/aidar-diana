@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aidar & Diana — Wedding Day</title>
+  <meta name="description" content="Свадебное приглашение Айдара и Дианы — 16.08.2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background" aria-hidden="true"></div>
+  <div class="shade" aria-hidden="true"></div>
+
+  <button class="music-btn" id="musicBtn" type="button" aria-label="Включить музыку">♫ Музыка</button>
+  <audio id="music" src="assets/on-my-own.m4a" loop preload="auto"></audio>
+
+  <main>
+    <section class="scene hero" id="home">
+      <div class="content hero-content">
+        <div class="script-title">Wedding<br>Day</div>
+        <h1>AIDAR &amp; DIANA</h1>
+        <p class="date">16.08.2026</p>
+      </div>
+      <div class="scroll-hint">SCROLL DOWN<br><span>⌄</span></div>
+    </section>
+
+    <section class="scene invitation" id="invitation">
+      <div class="content text-card">
+        <p class="overline">OUR INVITATION</p>
+        <h2>ДОРОГИЕ ГОСТИ!</h2>
+        <div class="divider"><span>♡</span></div>
+        <p>Мы будем счастливы разделить с вами день, наполненный любовью, теплом и радостными моментами.</p>
+        <p>С нетерпением ждем вас, чтобы вместе создать воспоминания, которые останутся с нами навсегда.</p>
+      </div>
+    </section>
+
+    <section class="scene dress" id="dress-code">
+      <div class="content text-card">
+        <h2>ДРЕСС-КОД</h2>
+        <div class="divider"><span>♡</span></div>
+        <p>Мы будем рады, если вы поддержите элегантный стиль и цветовую гамму торжества.</p>
+        <div class="palette" aria-label="Цветовая палитра дресс-кода">
+          <span style="--c:#5A3420"></span>
+          <span style="--c:#A38E7D"></span>
+          <span style="--c:#E8D7C3"></span>
+          <span style="--c:#F8F5F0"></span>
+          <span style="--c:#DCC6A4"></span>
+          <span style="--c:#C8D2C0"></span>
+          <span style="--c:#D7E3EC"></span>
+          <span style="--c:#EBCFD2"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene countdown" id="countdown">
+      <div class="content text-card">
+        <p class="overline">SAVE THE DATE</p>
+        <h2>ДО СВАДЬБЫ ОСТАЛОСЬ</h2>
+        <div class="timer" id="timer">
+          <div><strong id="days">00</strong><span>дней</span></div>
+          <div><strong id="hours">00</strong><span>часов</span></div>
+          <div><strong id="minutes">00</strong><span>минут</span></div>
+          <div><strong id="seconds">00</strong><span>секунд</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene program" id="program">
+      <div class="content text-card">
+        <h2>ПРОГРАММА</h2>
+        <div class="timeline">
+          <div><time>16:00</time><span>Сбор гостей</span></div>
+          <div><time>16:30</time><span>Welcome</span></div>
+          <div><time>17:00</time><span>Начало торжества</span></div>
+          <div><time>19:00</time><span>Шоу-программа</span></div>
+          <div><time>22:00</time><span>Завершение вечера</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene venue" id="venue">
+      <div class="content text-card">
+        <p class="overline">LOCATION</p>
+        <h2>МЕСТО ПРОВЕДЕНИЯ</h2>
+        <p class="venue-name">Ресторан «Ала-Тоо»</p>
+        <p>ул. Карасаева 66А</p>
+        <a class="route-btn" href="https://www.google.com/maps/search/?api=1&query=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%20%D0%90%D0%BB%D0%B0-%D0%A2%D0%BE%D0%BE%20%D1%83%D0%BB.%20%D0%9A%D0%B0%D1%80%D0%B0%D1%81%D0%B0%D0%B5%D0%B2%D0%B0%2066%D0%90" target="_blank" rel="noopener">Построить маршрут</a>
+      </div>
+    </section>
+
+    <section class="scene rsvp" id="rsvp">
+      <div class="content form-card">
+        <h2>ПОДТВЕРДИТЕ<br>ПРИСУТСТВИЕ</h2>
+        <form id="rsvpForm">
+          <input name="name" type="text" placeholder="Ваше имя" required />
+          <select name="status" required>
+            <option value="Буду присутствовать">Буду присутствовать</option>
+            <option value="К сожалению, не смогу">К сожалению, не смогу</option>
+          </select>
+          <input name="guests" type="number" min="1" max="20" value="1" placeholder="Количество гостей" />
+          <textarea name="comment" rows="3" placeholder="Комментарий"></textarea>
+          <button type="submit">Подтвердить</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="scene final" id="final">
+      <div class="content text-card">
+        <div class="script-small">Thank you</div>
+        <h2>ДО ВСТРЕЧИ</h2>
+        <p>Спасибо, что будете рядом в этот важный день.</p>
+        <p class="signature">Aidar &amp; Diana</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
